@@ -1,0 +1,65 @@
+@theme {
+  /* === DISPLAY === */
+  --display-large: 60px;
+  --leading-display-large: 72px;
+
+  --display-medium: 48px;
+  --leading-display-medium: 56px;
+
+  --display-small: 44px;
+  --leading-display-small: 52px;
+
+  /* === HEADLINE === */
+  --headline-large: 36px;
+  --leading-headline-large: 44px;
+
+  --headline-medium: 28px;
+  --leading-headline-medium: 36px;
+
+  --headline-small: 24px;
+  --leading-headline-small: 32px;
+
+  /* === BODY === */
+  --body-large: 18px;
+  --leading-body-large: 26px;
+
+  --body-medium: 16px;
+  --leading-body-medium: 24px;
+
+  --body-small: 14px;
+  --leading-body-small: 22px;
+
+  /* === LABEL === */
+  --label-large: 14px;
+  --leading-label-large: 17.5px;
+
+  --label-medium: 12px;
+  --leading-label-medium: 15px;
+
+  --label-small: 11px;
+  --leading-label-small: 13.8px;
+
+  /* Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+@utility t-display-* {
+  font-size: --value(--display-*);
+  line-height: --value(--leading-display-*);
+}
+
+@utility t-headline-* {
+  font-size: --value(--headline-*);
+  line-height: --value(--leading-headline-*);
+}
+@utility t-body-* {
+  font-size: --value(--body-*);
+  line-height: --value(--leading-body-*);
+}
+
+@utility t-label-* {
+  font-size: --value(--label-*);
+  line-height: --value(--leading-label-*);
+}

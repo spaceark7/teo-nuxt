@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@import "./fonts.css";
+@import "./colors.css";
+@import "./buttons.css";
+@import "./typography.css";
+/* @import "./components/typography.css"; */

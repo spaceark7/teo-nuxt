@@ -1,0 +1,108 @@
+@theme {
+  --btn-dark: var(--color-blue-teo-500);
+  --btn-text-dark: #ffffff;
+  --btn-hover-dark: var(--color-blue-teo-600);
+  --btn-active-dark: var(--color-blue-teo-700);
+
+  --btn-light: #ffffff;
+  --btn-text-light: var(--color-blue-teo-500);
+  --btn-hover-light: var(--color-blue-teo-50);
+  --btn-active-light: var(--color-blue-teo-100);
+
+  --btn-text-size-sm: 12px;
+  --btn-text-size-md: 14px;
+  --btn-text-size-lg: 16px;
+  --btn-text-size-xl: 18px;
+}
+
+/* @utility teo-btn-* {
+  background-color: --value(--btn-*);
+  color: --value(--btn-text-*);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: --value(--btn-hover-*);
+  }
+  &:active {
+    background-color: --value(--btn-active-*);
+  }
+} */
+
+@layer components {
+  .teo-btn-dark {
+    cursor: pointer;
+    @apply px-3 py-2 h-fit w-fit bg-blue-teo-500 text-white rounded-full hover:bg-blue-teo-600 transition active:bg-blue-teo-700;
+  }
+  .teo-btn-light {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-white text-blue-teo-500 rounded-full hover:bg-blue-teo-50 transition active:bg-blue-teo-100;
+  }
+
+  .teo-btn-secondary {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-blue-teo-50 text-blue-teo-500 rounded-full hover:bg-blue-teo-100 transition active:bg-blue-teo-200;
+  }
+  .teo-btn-secondary-cy {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-cyan-teo-50 text-cyan-teo-500 rounded-full hover:bg-cyan-teo-100 transition active:bg-cyan-teo-200;
+  }
+
+  .teo-btn-outline {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-transparent border-2 border-blue-teo-500 text-blue-teo-500 rounded-full hover:bg-cool-gray-teo-100 transition active:bg-cool-gray-teo-200;
+  }
+
+  .teo-btn-outline-cy {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-cyan-teo-50 border-2 border-cyan-teo-500 text-cyan-teo-500 rounded-full hover:bg-cool-gray-teo-100 transition active:bg-cool-gray-teo-200;
+  }
+
+  .teo-btn-tertiary {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-transparent text-blue-teo-500 rounded-full hover:bg-blue-teo-50 transition active:bg-blue-teo-50;
+  }
+
+  .teo-btn-tertiary-cy {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-transparent text-cyan-teo-500 rounded-full hover:bg-cyan-teo-50 transition active:bg-cyan-teo-50;
+  }
+
+  .teo-btn-ghost {
+    cursor: pointer;
+
+    @apply px-3 py-2 h-fit w-fit bg-transparent text-cool-gray-teo-600 rounded-full hover:text-blue-teo-700 transition active:text-blue-teo-700;
+  }
+
+  .teo-btn-link {
+    cursor: pointer;
+
+    @apply py-1.5 px-1 h-fit w-fit bg-transparent text-cool-gray-teo-600 rounded-full hover:text-cyan-teo-500;
+  }
+
+  .teo-btn-size-sm {
+    font-size: var(--btn-text-size-sm);
+  }
+  .teo-btn-size-md {
+    font-size: var(--btn-text-size-md);
+  }
+  .teo-btn-size-lg {
+    font-size: var(--btn-text-size-lg);
+    @apply py-2.5 px-5;
+  }
+  .teo-btn-size-xl {
+    font-size: var(--btn-text-size-xl);
+    @apply py-3 px-5;
+  }
+}
