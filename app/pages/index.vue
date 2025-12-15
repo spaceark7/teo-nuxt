@@ -1,10 +1,12 @@
 <template>
-  <ScrollSnapOverlay :sections="sections">
-    <template #default="{ section, index }">
-      <!-- Render komponen yang berbeda berdasarkan index atau properti section -->
-      <component :is="section.component" :data="section.data" :index="index" />
-    </template>
-  </ScrollSnapOverlay>
+  <ClientOnly>
+    <ScrollSnapOverlay :sections="sections">
+      <template #default="{ section, index }">
+        <!-- Render komponen yang berbeda berdasarkan index atau properti section -->
+        <component :is="section.component" :data="section.data" :index="index" />
+      </template>
+    </ScrollSnapOverlay>
+  </ClientOnly>
   <!-- <div class="snap-container">
     <div class="snap-section">
 

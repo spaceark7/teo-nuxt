@@ -122,6 +122,8 @@ const scrollToSection = (index: number) => {
 
 // Keyboard navigation
 onMounted(() => {
+
+  // Keyboard navigation
   const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === 'ArrowDown' || e.key === 'PageDown') {
       e.preventDefault()
