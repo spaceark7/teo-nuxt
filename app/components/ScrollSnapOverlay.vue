@@ -1,9 +1,9 @@
 <template>
   <div class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
     <section v-for="(section, index) in sections" :key="index" ref="sectionRefs"
-      class="h-screen snap-center flex items-center justify-center"
+      class="min-h-screen snap-start flex items-center justify-center"
       :class="index % 2 === 0 ? 'section-bg-color-top' : 'section-bg-color-bottom'">
-      <div class="section-content" :class="{ 'is-visible': visibleSections[index] }">
+      <div class="section-content w-full" :class="{ 'is-visible': visibleSections[index] }">
         <slot :section="section" :index="index" />
       </div>
     </section>
